@@ -26,6 +26,7 @@
         new daum.Postcode({
             oncomplete: function(data) {
                 // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+                window.kmpJsBridge.callNative = function (methodName, params, callback) {}
                 window.kmpJsBridge.callNative("Greet", JSON.stringify({message:"Hello"}),
                   function (data) {
                     document.getElementById("subtitle").innerText = data;
