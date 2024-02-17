@@ -49,17 +49,17 @@
                         extraAddr = ' (' + extraAddr + ')';
                     }
                     // 조합된 참고항목을 해당 필드에 넣는다.
-                    document.getElementById("sample6_extraAddress").value = extraAddr;
+                    // document.getElementById("sample6_extraAddress").value = extraAddr;
                 
                 } else {
-                    document.getElementById("sample6_extraAddress").value = '';
+                    // document.getElementById("sample6_extraAddress").value = '';
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('sample6_postcode').value = data.zonecode;
-                document.getElementById("sample6_address").value = addr;
+                // document.getElementById('sample6_postcode').value = data.zonecode;
+                // document.getElementById("sample6_address").value = addr;
 
-
+          
                 window.kmpJsBridge.callNative("AddressResult", JSON.stringify({message: addr}), 
                   function (data) {
                     console.log("AddressResult(data): " + data);
